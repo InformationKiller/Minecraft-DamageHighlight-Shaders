@@ -73,7 +73,7 @@ void main()
         pos = rotateY(-4.0) * pos;
         pos.yz -= vec2(0.2, 0.3);
         pos.y += 0.15 * sin(katana_anim() * 3.1415926);
-        pos.z += 0.05;
+        pos.yz += vec2(-0.05, 0.1);
         gl_Position = gl_ProjectionMatrix * pos;
         gl_Position.xy /= gl_ProjectionMatrix[0][0] / gbufferProjection[0][0];
     }
